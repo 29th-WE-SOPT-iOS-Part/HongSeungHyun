@@ -11,7 +11,6 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 	@IBAction func touchUpToGoBack(_ sender: Any) {
