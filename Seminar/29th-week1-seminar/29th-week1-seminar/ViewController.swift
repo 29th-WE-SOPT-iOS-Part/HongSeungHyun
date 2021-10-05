@@ -21,5 +21,10 @@ class ViewController: UIViewController {
 		testLabel.sizeToFit()
 	}
 	
+	@IBAction func touchUpToGoSecondView(_ sender: Any) {
+		guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else { return }
+		
+		self.navigationController?.pushViewController(nextVC, animated: true)
+	}
 }
 
