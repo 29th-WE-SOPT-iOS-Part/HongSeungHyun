@@ -18,9 +18,9 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
 		signUpButton.isEnabled = false
 		
-		nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-		emailPhoneTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-		pwTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+		[nameTextField, emailPhoneTextField, pwTextField].forEach {
+			$0?.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+		}
     }
 	
 	@objc
