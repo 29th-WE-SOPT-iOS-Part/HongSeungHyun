@@ -12,16 +12,33 @@ class SignUpVC: UIViewController {
 	@IBOutlet var nameTextField: UITextField!
 	@IBOutlet var emailPhoneTextField: UITextField!
 	@IBOutlet var pwTextField: UITextField!
+	@IBOutlet var signUpButton: UIButton!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		signUpButton.isEnabled = false
+		
+		nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+		emailPhoneTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+		pwTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
     }
+	
+	@objc
+	func textFieldDidChange(textField: UITextField) {
+		let allTextFieldsHaveText = [nameTextField, emailPhoneTextField, pwTextField].allSatisfy { $0.text?.isEmpty == false }
+		
+		if allTextFieldsHaveText {
+			signUpButton.isEnabled = true
+		} else {
+			signUpButton.isEnabled = false
+		}
+	}
     
 	@IBAction func showPwDidTap(_ sender: UIButton) {
 		sender.isSelected.toggle()
 	}
 	
-	@IBAction func signInButtonDidTap(_ sender: Any) {
+	@IBAction func signUpButtonDidTap(_ sender: Any) {
 		guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
 		
 		completeVC.userName = nameTextField.text
