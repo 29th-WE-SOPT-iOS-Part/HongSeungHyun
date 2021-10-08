@@ -11,24 +11,31 @@ class CompleteVC: UIViewController {
 
 	@IBOutlet var greetingMessage: UILabel!
 	var userName: String?
-	
+
 	override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
 		setGreetingMessage()
-    }
-    
+	}
+
+	func setUserName() -> String {
+		if let user = userName, user.count > 0 {
+			return user
+		} else {
+			return "회원"
+		}
+	}
+
 	func setGreetingMessage() {
-		if let user = userName {
-			greetingMessage.text = """
+		let user = setUserName()
+		greetingMessage.text = """
 			\(user)님
 			환영합니다!
 			"""
-			greetingMessage.numberOfLines = 0
-			greetingMessage.textAlignment = .center
-			greetingMessage.sizeToFit()
-		}
+		greetingMessage.numberOfLines = 0
+		greetingMessage.textAlignment = .center
+		greetingMessage.sizeToFit()
 	}
-	
+
 	@IBAction func checkButtonDidTap(_ sender: Any) {
 	}
 }
