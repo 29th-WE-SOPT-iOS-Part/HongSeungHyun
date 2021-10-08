@@ -36,6 +36,13 @@ class SignUpVC: UIViewController {
     
 	@IBAction func showPwDidTap(_ sender: UIButton) {
 		sender.isSelected.toggle()
+		
+		if sender.isSelected {
+			pwTextField.isSecureTextEntry = false
+		}
+		else {
+			pwTextField.isSecureTextEntry = true
+		}
 	}
 	
 	@IBAction func signUpButtonDidTap(_ sender: Any) {
