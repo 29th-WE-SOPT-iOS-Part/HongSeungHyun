@@ -203,7 +203,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="checkButtonDidTap:" destination="vGL-3L-0cT" eventType="touchUpInside" id="94Y-Z4-CgC"/>
-                                    <action selector="signInButtonDidTap:" destination="vGL-3L-0cT" eventType="touchUpInside" id="KxX-dB-VsG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoN-uc-4VN">

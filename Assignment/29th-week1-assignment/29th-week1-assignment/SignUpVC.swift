@@ -15,8 +15,6 @@ class SignUpVC: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 	@IBAction func showPwDidTap(_ sender: UIButton) {
@@ -24,8 +22,9 @@ class SignUpVC: UIViewController {
 	}
 	
 	@IBAction func signInButtonDidTap(_ sender: Any) {
-		guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") else { return }
+		guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
 		
+		completeVC.userName = nameTextField.text
 		completeVC.modalPresentationStyle = .fullScreen
 		self.present(completeVC, animated: true)
 	}
