@@ -37,5 +37,6 @@ class CompleteVC: UIViewController {
 	}
 
 	@IBAction func checkButtonDidTap(_ sender: Any) {
+		self.presentingViewController?.dismiss(animated: true)
 	}
 }
