@@ -7,7 +7,7 @@
 
 import UIKit
 
-class completeVC: UIViewController {
+class CompleteVC: UIViewController {
 
 	@IBOutlet var greetingMessage: UILabel!
 	var userName: String?

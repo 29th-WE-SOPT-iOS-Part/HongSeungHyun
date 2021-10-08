@@ -95,7 +95,6 @@
         <!--Sign UpVC-->
         <scene sceneID="oA4-Hz-UH7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="81m-VM-cao" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SignUpVC" id="MJy-rA-YJK" customClass="SignUpVC" customModule="_9th_week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ySd-0W-lVa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -175,14 +174,14 @@
                         <outlet property="pwTextField" destination="Myh-th-vnM" id="CkG-YP-D3R"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81m-VM-cao" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742.0289855072465" y="124.55357142857142"/>
         </scene>
         <!--CompleteVC-->
         <scene sceneID="bhM-zF-KmH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tSR-Kb-BmM" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="completeVC" id="vGL-3L-0cT" customClass="completeVC" customModule="_9th_week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteVC" id="vGL-3L-0cT" customClass="CompleteVC" customModule="_9th_week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZG-sX-8yB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,6 +221,7 @@
                         <outlet property="greetingMessage" destination="HoN-uc-4VN" id="7Ja-Xr-JQY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSR-Kb-BmM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2484.057971014493" y="124.55357142857142"/>
         </scene>
