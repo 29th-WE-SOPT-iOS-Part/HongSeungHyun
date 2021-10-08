@@ -30,6 +30,8 @@ class LoginVC: UIViewController {
 	}
 	
 	@IBAction func signUpButtonDidTap(_ sender: Any) {
+		guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") else { return }
+		self.navigationController?.pushViewController(signUpVC, animated: true)
 	}
 }
 
