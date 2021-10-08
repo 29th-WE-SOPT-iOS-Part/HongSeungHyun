@@ -13,6 +13,7 @@
 		4FD18285270DD75700BC7DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD18283270DD75700BC7DE2 /* Main.storyboard */; };
 		4FD18287270DD75900BC7DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD18286270DD75900BC7DE2 /* Assets.xcassets */; };
 		4FD1828A270DD75900BC7DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD18288270DD75900BC7DE2 /* LaunchScreen.storyboard */; };
+		4FD182B627104CFB00BC7DE2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD182B527104CFB00BC7DE2 /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4FD18286270DD75900BC7DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD18289270DD75900BC7DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FD1828B270DD75900BC7DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD182B527104CFB00BC7DE2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4FD1827D270DD75700BC7DE2 /* AppDelegate.swift */,
 				4FD1827F270DD75700BC7DE2 /* SceneDelegate.swift */,
 				4FD18281270DD75700BC7DE2 /* LoginVC.swift */,
+				4FD182B527104CFB00BC7DE2 /* SignUpVC.swift */,
 				4FD18283270DD75700BC7DE2 /* Main.storyboard */,
 				4FD18286270DD75900BC7DE2 /* Assets.xcassets */,
 				4FD18288270DD75900BC7DE2 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD182B627104CFB00BC7DE2 /* SignUpVC.swift in Sources */,
 				4FD18282270DD75700BC7DE2 /* LoginVC.swift in Sources */,
 				4FD1827E270DD75700BC7DE2 /* AppDelegate.swift in Sources */,
 				4FD18280270DD75700BC7DE2 /* SceneDelegate.swift in Sources */,
