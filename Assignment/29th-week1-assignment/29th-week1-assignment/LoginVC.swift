@@ -27,6 +27,10 @@ class LoginVC: UIViewController {
 	}
 	
 	@IBAction func signInButtonDidTap(_ sender: Any) {
+		guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") else { return }
+		
+		completeVC.modalPresentationStyle = .fullScreen
+		self.present(completeVC, animated: true)
 	}
 	
 	@IBAction func signUpButtonDidTap(_ sender: Any) {
