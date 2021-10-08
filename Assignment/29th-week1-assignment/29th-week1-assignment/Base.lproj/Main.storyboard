@@ -86,6 +86,7 @@
                         <outlet property="loginDescLabel" destination="x8E-t0-4xK" id="P8Y-Sj-PMJ"/>
                         <outlet property="nameTextField" destination="XYD-HA-BYI" id="ijI-0y-CwM"/>
                         <outlet property="pwTextField" destination="Gru-af-X93" id="chd-Fr-6ZB"/>
+                        <outlet property="signInButton" destination="gwU-EK-oIK" id="G3d-jV-XMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,7 +142,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="signInButtonDidTap:" destination="MJy-rA-YJK" eventType="touchUpInside" id="qiu-6Y-89c"/>
+                                    <action selector="signUpButtonDidTap:" destination="MJy-rA-YJK" eventType="touchUpInside" id="BE8-tu-4AD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-J5-gtP">
@@ -172,6 +173,7 @@
                         <outlet property="emailPhoneTextField" destination="oI7-xr-J2R" id="LyL-1T-wZ7"/>
                         <outlet property="nameTextField" destination="ELf-w0-vnq" id="e0h-mf-dsL"/>
                         <outlet property="pwTextField" destination="Myh-th-vnM" id="CkG-YP-D3R"/>
+                        <outlet property="signUpButton" destination="Fwc-o3-gWh" id="r5h-Zg-5x8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81m-VM-cao" sceneMemberID="firstResponder"/>
