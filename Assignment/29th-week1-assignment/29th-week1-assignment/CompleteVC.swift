@@ -17,6 +17,7 @@ class CompleteVC: UIViewController {
 		setGreetingMessage()
 	}
 
+	/// userName 옵셔널 언래핑 + 빈문자열 여부 확인
 	func setUserName() -> String {
 		if let user = userName, user.count > 0 {
 			return user
@@ -25,6 +26,7 @@ class CompleteVC: UIViewController {
 		}
 	}
 
+	/// 환영 메시지 설정
 	func setGreetingMessage() {
 		let user = setUserName()
 		greetingMessage.text = """
@@ -37,6 +39,7 @@ class CompleteVC: UIViewController {
 	}
 
 	@IBAction func checkButtonDidTap(_ sender: Any) {
+		/// 이전 화면의 뷰 컨트롤러 인스턴스에 대한 참조를 이용해 화면을 내린다.
 		self.presentingViewController?.dismiss(animated: true)
 	}
 }
