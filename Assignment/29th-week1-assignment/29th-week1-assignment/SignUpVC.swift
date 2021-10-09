@@ -19,6 +19,10 @@ class SignUpVC: UIViewController {
 		signUpButton.isEnabled = false
 
 		/// 이벤트가 발생했을 때 target 오브젝트와 action 메서드를 이어줍니다.
+		addActionToTextField()
+	}
+
+	func addActionToTextField() {
 		[nameTextField, emailPhoneTextField, pwTextField].forEach {
 			$0?.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
 		}
@@ -27,7 +31,7 @@ class SignUpVC: UIViewController {
 	@objc
 	func textFieldDidChange(textField: UITextField) {
 		/// 모든 텍스트필드의 값이 비어 있지않다면 true가 됩니다.
-		let allTextFieldsHaveText = [nameTextField, emailPhoneTextField, pwTextField].allSatisfy { $0.text?.isEmpty == false }
+		let allTextFieldsHaveText = [nameTextField, emailPhoneTextField, pwTextField].allSatisfy { $0.hasText }
 
 		if allTextFieldsHaveText {
 			signUpButton.isEnabled = true
