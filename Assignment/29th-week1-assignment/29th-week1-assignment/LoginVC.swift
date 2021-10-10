@@ -13,13 +13,15 @@ class LoginVC: UIViewController {
 	@IBOutlet var nameTextField: UITextField!
 	@IBOutlet var emailPhoneTextField: UITextField!
 	@IBOutlet var pwTextField: UITextField!
-	@IBOutlet var signInButton: UIButton!
+	@IBOutlet var signInButton: UIButton! {
+		didSet {
+			signInButton.isEnabled = false
+		}
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setLoginDescLabel()
-		signInButton.isEnabled = false
-
 		/// 이벤트가 발생했을 때 target 오브젝트와 action 메서드를 이어줍니다.
 		addActionToTextField()
 	}
@@ -41,12 +43,8 @@ class LoginVC: UIViewController {
 	func textFieldDidChange(textField: UITextField) {
 		/// 모든 텍스트필드의 값이 비어 있지않다면 true가 됩니다.
 		let allTextFieldsHaveText = [nameTextField, emailPhoneTextField, pwTextField].allSatisfy { $0.hasText }
-
-		if allTextFieldsHaveText {
-			signInButton.isEnabled = true
-		} else {
-			signInButton.isEnabled = false
-		}
+		/// 텍스트필드의 값이 모두 채워져있다면 버튼 활성화
+		signInButton.isEnabled = allTextFieldsHaveText ? true : false
 	}
 
 	@IBAction func signInButtonDidTap(_ sender: Any) {
