@@ -1,6 +1,6 @@
 //
 //  SignUpVC.swift
-//  29th-week1-assignment
+//  29th-assignment
 //
 //  Created by Noah on 2021/10/08.
 //
