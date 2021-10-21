@@ -4,8 +4,8 @@
 :date: 세미나 일정
 |  <center>주차</center> |  <center>세미나 내용</center>
 |:--------:|:--------:|
-|**1주차**| iOS 컴포넌트의 이해, Xcode 기본 사용법, View 화면 전환
-|**2주차**| Autolayout, StackView, TabBarController
+|**1주차**| iOS 기초, Xcode 사용과 UI 구성하기, 화면 전환 및 데이터 전달 기초
+|**2주차**| AutoLayout, StackView, TabBarController
 |**3주차**| ScrollView, TableView, CollectionView
 |**4주차**| Cocoapods & Networking, REST API
 |**5주차**| 디자인 합동 세미나
@@ -17,6 +17,13 @@
 
 |  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
 |:--------:|:--------:|:--------:|:--------:|
-|**1주차 세미나**|iOS 컴포넌트의 이해, Xcode 기본 사용법, View 화면 전환|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/1)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/2)
-|**1주차 과제**|기본 UI구성, 화면전환, 데이터 전달|-|-
+|**1주차 세미나**|iOS 기초, Xcode 사용과 UI 구성하기, 화면 전환 및 데이터 전달 기초|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/1)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/2)
+|**1주차 과제**|기본 UI구성, 화면전환, 데이터 전달|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/3)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/4)
+---
+![week2](https://user-images.githubusercontent.com/63908856/138257895-4a70287b-a0a2-49ab-9ea3-17a5e5e0c376.png)
+
+|  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
+|:--------:|:--------:|:--------:|:--------:|
+|**2주차 세미나**|AutoLayout, StackView, TabBarController|-|-
+|**2주차 과제**|AutoLayout과 TabbarController|-|-
 ---
