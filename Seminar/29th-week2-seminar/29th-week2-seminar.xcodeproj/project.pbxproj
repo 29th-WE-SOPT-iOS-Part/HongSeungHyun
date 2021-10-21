@@ -13,6 +13,7 @@
 		4FE2B4202721796900A4D956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B41E2721796900A4D956 /* Main.storyboard */; };
 		4FE2B4222721796B00A4D956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B4212721796B00A4D956 /* Assets.xcassets */; };
 		4FE2B4252721796B00A4D956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B4232721796B00A4D956 /* LaunchScreen.storyboard */; };
+		4FE2B42D27217A2E00A4D956 /* AutoLayoutPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B42C27217A2E00A4D956 /* AutoLayoutPractice.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4FE2B4212721796B00A4D956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE2B4242721796B00A4D956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE2B4262721796B00A4D956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE2B42C27217A2E00A4D956 /* AutoLayoutPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayoutPractice.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4FE2B4212721796B00A4D956 /* Assets.xcassets */,
 				4FE2B4232721796B00A4D956 /* LaunchScreen.storyboard */,
 				4FE2B4262721796B00A4D956 /* Info.plist */,
+				4FE2B42C27217A2E00A4D956 /* AutoLayoutPractice.storyboard */,
 			);
 			path = "29th-week2-seminar";
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			files = (
 				4FE2B4252721796B00A4D956 /* LaunchScreen.storyboard in Resources */,
 				4FE2B4222721796B00A4D956 /* Assets.xcassets in Resources */,
+				4FE2B42D27217A2E00A4D956 /* AutoLayoutPractice.storyboard in Resources */,
 				4FE2B4202721796900A4D956 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
