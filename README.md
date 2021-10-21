@@ -24,6 +24,6 @@
 
 |  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
 |:--------:|:--------:|:--------:|:--------:|
-|**2주차 세미나**|AutoLayout, StackView, TabBarController|-|-
+|**2주차 세미나**|AutoLayout, StackView, TabBarController|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/5)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/6)
 |**2주차 과제**|AutoLayout과 TabbarController|-|-
 ---
