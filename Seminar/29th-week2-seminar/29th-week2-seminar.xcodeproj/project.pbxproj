@@ -14,6 +14,10 @@
 		4FE2B4222721796B00A4D956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B4212721796B00A4D956 /* Assets.xcassets */; };
 		4FE2B4252721796B00A4D956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B4232721796B00A4D956 /* LaunchScreen.storyboard */; };
 		4FE2B42D27217A2E00A4D956 /* AutoLayoutPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B42C27217A2E00A4D956 /* AutoLayoutPractice.storyboard */; };
+		4FE2B42F27218A8800A4D956 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2B42E27218A8800A4D956 /* Tabbar.storyboard */; };
+		4FE2B43127218D3800A4D956 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2B43027218D3800A4D956 /* CustomTabBarController.swift */; };
+		4FE2B43327218D6000A4D956 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2B43227218D6000A4D956 /* OrangeVC.swift */; };
+		4FE2B43527218D6C00A4D956 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2B43427218D6C00A4D956 /* PurpleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		4FE2B4242721796B00A4D956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE2B4262721796B00A4D956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE2B42C27217A2E00A4D956 /* AutoLayoutPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayoutPractice.storyboard; sourceTree = "<group>"; };
+		4FE2B42E27218A8800A4D956 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		4FE2B43027218D3800A4D956 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		4FE2B43227218D6000A4D956 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
+		4FE2B43427218D6C00A4D956 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +69,15 @@
 				4FE2B4182721796900A4D956 /* AppDelegate.swift */,
 				4FE2B41A2721796900A4D956 /* SceneDelegate.swift */,
 				4FE2B41C2721796900A4D956 /* ViewController.swift */,
+				4FE2B43027218D3800A4D956 /* CustomTabBarController.swift */,
+				4FE2B43227218D6000A4D956 /* OrangeVC.swift */,
+				4FE2B43427218D6C00A4D956 /* PurpleVC.swift */,
 				4FE2B41E2721796900A4D956 /* Main.storyboard */,
 				4FE2B4212721796B00A4D956 /* Assets.xcassets */,
 				4FE2B4232721796B00A4D956 /* LaunchScreen.storyboard */,
 				4FE2B4262721796B00A4D956 /* Info.plist */,
 				4FE2B42C27217A2E00A4D956 /* AutoLayoutPractice.storyboard */,
+				4FE2B42E27218A8800A4D956 /* Tabbar.storyboard */,
 			);
 			path = "29th-week2-seminar";
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE2B42F27218A8800A4D956 /* Tabbar.storyboard in Resources */,
 				4FE2B4252721796B00A4D956 /* LaunchScreen.storyboard in Resources */,
 				4FE2B4222721796B00A4D956 /* Assets.xcassets in Resources */,
 				4FE2B42D27217A2E00A4D956 /* AutoLayoutPractice.storyboard in Resources */,
@@ -144,6 +157,9 @@
 			files = (
 				4FE2B41D2721796900A4D956 /* ViewController.swift in Sources */,
 				4FE2B4192721796900A4D956 /* AppDelegate.swift in Sources */,
+				4FE2B43527218D6C00A4D956 /* PurpleVC.swift in Sources */,
+				4FE2B43327218D6000A4D956 /* OrangeVC.swift in Sources */,
+				4FE2B43127218D3800A4D956 /* CustomTabBarController.swift in Sources */,
 				4FE2B41B2721796900A4D956 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
