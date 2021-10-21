@@ -44,7 +44,7 @@ class LoginVC: UIViewController {
 		/// 모든 텍스트필드의 값이 비어 있지않다면 true가 됩니다.
 		let allTextFieldsHaveText = [nameTextField, emailPhoneTextField, pwTextField].allSatisfy { $0.hasText }
 		/// 텍스트필드의 값이 모두 채워져있다면 버튼 활성화
-		signInButton.isEnabled = allTextFieldsHaveText ? true : false
+		signInButton.isEnabled = allTextFieldsHaveText
 	}
 
 	@IBAction func signInButtonDidTap(_ sender: Any) {
