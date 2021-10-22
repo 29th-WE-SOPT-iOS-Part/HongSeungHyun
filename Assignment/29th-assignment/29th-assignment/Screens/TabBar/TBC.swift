@@ -13,41 +13,43 @@ class TBC: UITabBarController {
 		super.viewDidLoad()
 		setTabBar()
 	}
-	
+
+	func createTabBarItem<T>(storyboardName: String, viewController: T, title: String, tabBarImages: [String]) -> T? where T: UIViewController {
+		let SB = UIStoryboard(name: storyboardName, bundle: nil)
+		guard var tab = SB.instantiateViewController(withIdentifier: "\(T.self)") as? T else { return nil }
+		setTabBarItem(tab: &tab, title: title, unSelectedImage: tabBarImages[0], selectedImage: tabBarImages[1])
+		
+		return tab
+	}
+
+	func setTabBarItem<T>(tab: inout T, title: String, unSelectedImage: String, selectedImage: String) where T: UIViewController {
+		tab.title = title
+		tab.tabBarItem.image = UIImage(named: unSelectedImage)
+		tab.tabBarItem.selectedImage = UIImage(named: selectedImage)
+	}
+
 	func setTabBar() {
 		/// HomeTab
-		let homeSB = UIStoryboard(name: "Home", bundle: nil)
-		guard let homeTab = homeSB.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else { return }
-		homeTab.title = "홈"
-		homeTab.tabBarItem.image = UIImage(named: "homeIcon")
-		homeTab.tabBarItem.selectedImage = UIImage(named: "homeIconFill")
+		guard let homeTab = createTabBarItem(storyboardName: "Home", viewController: HomeVC(), title: "Home", tabBarImages: ["homeIcon", "homeIconFill"]) else { return }
 
 		/// ShortsTab
-		let shortsSB = UIStoryboard(name: "Shorts", bundle: nil)
-		guard let shortsTab = shortsSB.instantiateViewController(withIdentifier: "ShortsVC") as? ShortsVC else { return }
-		shortsTab.title = "Shorts"
-		shortsTab.tabBarItem.image = UIImage(named: "shortsIcon")
-		shortsTab.tabBarItem.selectedImage = UIImage(named: "shortsIconFill")
+		guard let shortsTab = createTabBarItem(storyboardName: "Shorts", viewController: ShortsVC(), title: "Shorts", tabBarImages: ["shortsIcon", "shortsIconFill"]) else { return }
 
-		let addSB = UIStoryboard(name: "Add", bundle: nil)
-		guard let addTab = addSB.instantiateViewController(withIdentifier: "AddVC") as? AddVC else { return }
-		addTab.title = "추가"
-		addTab.tabBarItem.image = UIImage(named: "plueCircleIcon")
-		addTab.tabBarItem.selectedImage = UIImage(named: "plueCircleIcon")
+		/// AddTab
+		guard let addTab = createTabBarItem(storyboardName: "Add", viewController: AddVC(), title: "추가", tabBarImages: ["plueCircleIcon", "plueCircleIconFill"]) else { return }
+		
+		/// SubscriptionTab
+		guard let subscriptionsTab = createTabBarItem(storyboardName: "Subscriptions", viewController: SubscriptionsVC(), title: "구독", tabBarImages: ["subscriptionsIcon", "subscriptionsIconFill"]) else { return }
 
-		let subscriptionsSB = UIStoryboard(name: "Subscriptions", bundle: nil)
-		guard let subscriptionsTab = subscriptionsSB.instantiateViewController(withIdentifier: "SubscriptionsVC") as? SubscriptionsVC else { return }
-		subscriptionsTab.title = "구독"
-		subscriptionsTab.tabBarItem.image = UIImage(named: "subscriptionsIcon")
-		subscriptionsTab.tabBarItem.selectedImage = UIImage(named: "subscriptionsIconFill")
+		/// LibraryTab
+		guard let libraryTab = createTabBarItem(storyboardName: "Library", viewController: LibraryVC(), title: "보관함", tabBarImages: ["LibraryIcon", "LibraryIconFill"]) else { return }
 
-		let librarySB = UIStoryboard(name: "Library", bundle: nil)
-		guard let libraryTab = librarySB.instantiateViewController(withIdentifier: "LibraryVC") as? LibraryVC else { return }
-		libraryTab.title = "보관함"
-		libraryTab.tabBarItem.image = UIImage(named: "LibraryIcon")
-		libraryTab.tabBarItem.selectedImage = UIImage(named: "LibraryIconFill")
+		let tabBarItems = [homeTab, shortsTab, addTab, subscriptionsTab, libraryTab]
+		setUpViewControllers(viewControllers: tabBarItems)
+	}
 
-		setViewControllers([homeTab, shortsTab, addTab, subscriptionsTab, libraryTab], animated: false)
+	func setUpViewControllers(viewControllers: [UIViewController]) {
+		setViewControllers(viewControllers, animated: true)
 	}
 
 }
