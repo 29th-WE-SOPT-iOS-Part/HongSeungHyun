@@ -26,11 +26,22 @@ class LoginVC: UIViewController {
 		addActionToTextField()
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		setTextFieldClear()
+	}
+
 	func setLoginDescLabel() {
-		loginDescLabel.text = "YouTube도 이동하며 계속하세요. 앱 및 Safari에서도 Google 서비스에 로그인됩니다."
+		loginDescLabel.text = "YouTube도 이동하며 계속하세요.\n앱 및 Safari에서도 Google 서비스에 로그인됩니다."
 		loginDescLabel.numberOfLines = 0
 		loginDescLabel.textAlignment = .center
 		loginDescLabel.sizeToFit()
+	}
+
+	func setTextFieldClear() {
+		[nameTextField, emailPhoneTextField, pwTextField].forEach {
+			$0.text = ""
+		}
 	}
 
 	func addActionToTextField() {
@@ -65,5 +76,9 @@ class LoginVC: UIViewController {
 		/// 내비게이션 컨트롤러를 사용하여 화면을 전환합니다.
 		self.navigationController?.pushViewController(signUpVC, animated: true)
 	}
+
+	// MARK: Unwind Segue를 사용하여 로그인 화면으로 돌아옵니다.
+
+	@IBAction func otherAccountLoginButtonDidTap(_ sender: UIStoryboardSegue) { }
 }
 
