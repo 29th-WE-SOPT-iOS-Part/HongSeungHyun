@@ -15,17 +15,17 @@ class TBC: UITabBarController {
 	}
 
 	// MARK: - TabBar 아이템 만드는 함수
-	
+
 	func createTabBarItem<T>(storyboardName: String, viewController: T, title: String, tabBarImages: [String]) -> T? where T: UIViewController {
 		let SB = UIStoryboard(name: storyboardName, bundle: nil)
 		guard var tab = SB.instantiateViewController(withIdentifier: "\(T.self)") as? T else { return nil }
 		setTabBarItem(tab: &tab, title: title, unSelectedImage: tabBarImages[0], selectedImage: tabBarImages[1])
-		
+
 		return tab
 	}
 
 	// MARK: - TabBar 아이템 속성 세팅 해주는 함수
-	
+
 	func setTabBarItem<T>(tab: inout T, title: String, unSelectedImage: String, selectedImage: String) where T: UIViewController {
 		tab.title = title
 		tab.tabBarItem.image = UIImage(named: unSelectedImage)
@@ -33,29 +33,29 @@ class TBC: UITabBarController {
 	}
 
 	// MARK: - TabBar 세팅하는 함수
-	
+
 	func setTabBar() {
-		/// HomeTab
-		guard let homeTab = createTabBarItem(storyboardName: "Home", viewController: HomeVC(), title: "Home", tabBarImages: ["homeIcon", "homeIconFill"]) else { return }
-
-		/// ShortsTab
-		guard let shortsTab = createTabBarItem(storyboardName: "Shorts", viewController: ShortsVC(), title: "Shorts", tabBarImages: ["shortsIcon", "shortsIconFill"]) else { return }
-
-		/// AddTab
-		guard let addTab = createTabBarItem(storyboardName: "Add", viewController: AddVC(), title: "추가", tabBarImages: ["plueCircleIcon", "plueCircleIconFill"]) else { return }
+		/// tab bar images
+		let homeIcon = ["homeIcon", "homeIconFill"]
+		let shortsIcon = ["shortsIcon", "shortsIconFill"]
+		let plueCircleIcon = ["plueCircleIcon", "plueCircleIcon"]
+		let subscriptionsIcon = ["subscriptionsIcon", "subscriptionsIconFill"]
+		let libraryIcon = ["LibraryIcon", "LibraryIconFill"]
 		
-		/// SubscriptionTab
-		guard let subscriptionsTab = createTabBarItem(storyboardName: "Subscriptions", viewController: SubscriptionsVC(), title: "구독", tabBarImages: ["subscriptionsIcon", "subscriptionsIconFill"]) else { return }
-
-		/// LibraryTab
-		guard let libraryTab = createTabBarItem(storyboardName: "Library", viewController: LibraryVC(), title: "보관함", tabBarImages: ["LibraryIcon", "LibraryIconFill"]) else { return }
+		/// create tab bar item
+		guard let homeTab = createTabBarItem(storyboardName: "Home", viewController: HomeVC(), title: "Home", tabBarImages: homeIcon),
+			let shortsTab = createTabBarItem(storyboardName: "Shorts", viewController: ShortsVC(), title: "Shorts", tabBarImages: shortsIcon),
+			let addTab = createTabBarItem(storyboardName: "Add", viewController: AddVC(), title: "추가", tabBarImages: plueCircleIcon),
+			let subscriptionsTab = createTabBarItem(storyboardName: "Subscriptions", viewController: SubscriptionsVC(), title: "구독", tabBarImages: subscriptionsIcon),
+			let libraryTab = createTabBarItem(storyboardName: "Library", viewController: LibraryVC(), title: "보관함", tabBarImages: libraryIcon)
+			else { return }
 
 		let tabBarItems = [homeTab, shortsTab, addTab, subscriptionsTab, libraryTab]
 		setUpViewControllers(viewControllers: tabBarItems)
 	}
 
 	// MARK: - TabBar의  view controllers를 세팅하는 함수
-	
+
 	func setUpViewControllers(viewControllers: [UIViewController]) {
 		setViewControllers(viewControllers, animated: true)
 	}
