@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F819C34272B2B8E008B41DD /* PartDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F819C33272B2B8E008B41DD /* PartDataModel.swift */; };
 		4FEC2968272B1A9200C11738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC2967272B1A9200C11738 /* AppDelegate.swift */; };
 		4FEC296A272B1A9200C11738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC2969272B1A9200C11738 /* SceneDelegate.swift */; };
 		4FEC296C272B1A9200C11738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC296B272B1A9200C11738 /* ViewController.swift */; };
 		4FEC296F272B1A9200C11738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEC296D272B1A9200C11738 /* Main.storyboard */; };
 		4FEC2971272B1A9500C11738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEC2970272B1A9500C11738 /* Assets.xcassets */; };
 		4FEC2974272B1A9500C11738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEC2972272B1A9500C11738 /* LaunchScreen.storyboard */; };
+		4FEC297F272B26FD00C11738 /* DelegatePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC297E272B26FD00C11738 /* DelegatePracticeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F819C33272B2B8E008B41DD /* PartDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartDataModel.swift; sourceTree = "<group>"; };
 		4FEC2964272B1A9200C11738 /* 29th-week3-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-week3-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEC2967272B1A9200C11738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FEC2969272B1A9200C11738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		4FEC2970272B1A9500C11738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FEC2973272B1A9500C11738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FEC2975272B1A9500C11738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FEC297E272B26FD00C11738 /* DelegatePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePracticeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				4FEC2967272B1A9200C11738 /* AppDelegate.swift */,
 				4FEC2969272B1A9200C11738 /* SceneDelegate.swift */,
 				4FEC296B272B1A9200C11738 /* ViewController.swift */,
+				4F819C33272B2B8E008B41DD /* PartDataModel.swift */,
+				4FEC297E272B26FD00C11738 /* DelegatePracticeVC.swift */,
 				4FEC296D272B1A9200C11738 /* Main.storyboard */,
 				4FEC2970272B1A9500C11738 /* Assets.xcassets */,
 				4FEC2972272B1A9500C11738 /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 				4FEC296C272B1A9200C11738 /* ViewController.swift in Sources */,
 				4FEC2968272B1A9200C11738 /* AppDelegate.swift in Sources */,
 				4FEC296A272B1A9200C11738 /* SceneDelegate.swift in Sources */,
+				4F819C34272B2B8E008B41DD /* PartDataModel.swift in Sources */,
+				4FEC297F272B26FD00C11738 /* DelegatePracticeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7J855UGZA4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "29th-week3-seminar/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7J855UGZA4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "29th-week3-seminar/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
