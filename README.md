@@ -6,7 +6,7 @@
 |:--------:|:--------:|
 |**1주차**| iOS 기초, Xcode 사용과 UI 구성하기, 화면 전환 및 데이터 전달 기초
 |**2주차**| AutoLayout, StackView, TabBarController
-|**3주차**| ScrollView, TableView, CollectionView
+|**3주차**| ScrollView, Delegate Pattern, TableView, CollectionView
 |**4주차**| Cocoapods & Networking, REST API
 |**5주차**| 디자인 합동 세미나
 |**6주차**| 서버 합동 세미나
@@ -25,5 +25,12 @@
 |  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
 |:--------:|:--------:|:--------:|:--------:|
 |**2주차 세미나**|AutoLayout, StackView, TabBarController|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/5)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/6)
-|**2주차 과제**|AutoLayout과 TabbarController|-|-
+|**2주차 과제**|AutoLayout과 TabbarController|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/7)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/8)
 ---
+![29th-iOS-week3](https://user-images.githubusercontent.com/63908856/139332628-48c6a82e-16be-41af-9bce-bd71fcdf034f.png)
+
+
+|  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
+|:--------:|:--------:|:--------:|:--------:|
+|**3주차 세미나**|ScrollView, Delegate Pattern, TableView, CollectionView|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/9)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/10)
+|**3주차 과제**|TableView와 CollectionView|-|-
