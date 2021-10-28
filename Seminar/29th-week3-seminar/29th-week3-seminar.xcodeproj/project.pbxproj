@@ -13,6 +13,7 @@
 		4F819C3B272B3184008B41DD /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F819C39272B3184008B41DD /* RankingTableViewCell.swift */; };
 		4F819C3C272B3184008B41DD /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F819C3A272B3184008B41DD /* RankingTableViewCell.xib */; };
 		4F819C3E272B35B7008B41DD /* AppContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F819C3D272B35B7008B41DD /* AppContentModel.swift */; };
+		4F819C40272B3BE2008B41DD /* RankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F819C3F272B3BE2008B41DD /* RankCollectionViewCell.swift */; };
 		4FEC2968272B1A9200C11738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC2967272B1A9200C11738 /* AppDelegate.swift */; };
 		4FEC296A272B1A9200C11738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC2969272B1A9200C11738 /* SceneDelegate.swift */; };
 		4FEC296C272B1A9200C11738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC296B272B1A9200C11738 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		4F819C39272B3184008B41DD /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		4F819C3A272B3184008B41DD /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
 		4F819C3D272B35B7008B41DD /* AppContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContentModel.swift; sourceTree = "<group>"; };
+		4F819C3F272B3BE2008B41DD /* RankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCollectionViewCell.swift; sourceTree = "<group>"; };
 		4FEC2964272B1A9200C11738 /* 29th-week3-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-week3-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEC2967272B1A9200C11738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FEC2969272B1A9200C11738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4F819C37272B30E4008B41DD /* RankingVC.swift */,
 				4F819C35272B3079008B41DD /* Practice.storyboard */,
 				4F819C39272B3184008B41DD /* RankingTableViewCell.swift */,
+				4F819C3F272B3BE2008B41DD /* RankCollectionViewCell.swift */,
 				4F819C3A272B3184008B41DD /* RankingTableViewCell.xib */,
 				4FEC296D272B1A9200C11738 /* Main.storyboard */,
 				4FEC2970272B1A9500C11738 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 				4FEC296C272B1A9200C11738 /* ViewController.swift in Sources */,
 				4FEC2968272B1A9200C11738 /* AppDelegate.swift in Sources */,
 				4FEC296A272B1A9200C11738 /* SceneDelegate.swift in Sources */,
+				4F819C40272B3BE2008B41DD /* RankCollectionViewCell.swift in Sources */,
 				4F819C38272B30E4008B41DD /* RankingVC.swift in Sources */,
 				4F819C3B272B3184008B41DD /* RankingTableViewCell.swift in Sources */,
 				4F819C3E272B35B7008B41DD /* AppContentModel.swift in Sources */,

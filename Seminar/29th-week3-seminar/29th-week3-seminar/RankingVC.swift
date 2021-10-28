@@ -10,6 +10,7 @@ import UIKit
 class RankingVC: UIViewController {
 
 	@IBOutlet weak var rankTableView: UITableView!
+	@IBOutlet weak var rankCollectionView: UICollectionView!
 	
 	var appContentList = [AppContentData]()
 	
@@ -20,6 +21,8 @@ class RankingVC: UIViewController {
 		rankTableView.separatorStyle = .none
 		rankTableView.dataSource = self
 		rankTableView.delegate = self
+		rankCollectionView.dataSource = self
+		rankCollectionView.delegate = self
     }
 	
 	func registerXib() {
@@ -52,7 +55,7 @@ extension RankingVC: UITableViewDelegate {
 
 // 테이블을 만들 때 필요한 정보를 제공
 extension RankingVC: UITableViewDataSource {
-	// section 마다 몇개의 row를 넣어야하는지 지정하는 함수
+	// section 마다 몇개의 row를 넣어야하는지 지정하는 메소드
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return appContentList.count
 	}
@@ -64,5 +67,43 @@ extension RankingVC: UITableViewDataSource {
 		
 		cell.setData(rank: indexPath.row + 1, appData: appContentList[indexPath.row])
 		return cell
+	}
+}
+
+extension RankingVC: UICollectionViewDataSource {
+	// section 마다 몇 개의 아이템이 들어가는지 결정하는 메소드
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return appContentList.count
+	}
+	
+	// tableView와 비슷하게 해당 indexPath에 어떤 cell 데이터를 넣을지 결정하는 메소드
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RankCollectionViewCell.identifier, for: indexPath) as? RankCollectionViewCell else { return UICollectionViewCell() }
+		
+		cell.setData(appName: appContentList[indexPath.row].appName, appImage: appContentList[indexPath.row].makeImage())
+		
+		return cell
+	}
+}
+
+extension RankingVC: UICollectionViewDelegateFlowLayout {
+	// item size(width: 100, height: 100)
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: 100, height: 100)
+	}
+
+	// content 외부에 감쌀 inset이 없기 때문에 (0, 0, 0, 0)와 같은 의미인 UIEdgeInset.zero를 넣어준다.
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		return UIEdgeInsets.zero
+	}
+
+	// cell간의 상,하 간격이 없기 때문에 0으로 지정
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
+	}
+
+	// cell간의 좌,우 간격이 없기 때문에 0으로 지정
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
 	}
 }
