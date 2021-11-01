@@ -35,6 +35,15 @@ struct HomeManager {
 		Channel(image: makeImage(imageName: "ggamju8"), title: "29th SOPT"),
 		
 	]
+	
+	lazy var tags = [
+		Tag(title: "전체"),
+		Tag(title: "오늘"),
+		Tag(title: "이어서 시청하기"),
+		Tag(title: "시청하지 않음"),
+		Tag(title: "실시간"),
+		Tag(title: "게시물"),
+	]
 }
 
 extension HomeManager: ThumbnailManager {
@@ -79,5 +88,11 @@ extension HomeManager: ChannelManager {
 	
 	mutating func getChannelTitle(_ index: Int) -> String {
 		return channels[index].title
+	}
+}
+
+extension HomeManager: TagManager {
+	mutating func getTagTitle(_ index: Int) -> String {
+		return tags[index].title
 	}
 }
