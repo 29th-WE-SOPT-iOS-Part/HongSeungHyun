@@ -5,7 +5,6 @@
 //  Created by Noah on 2021/10/29.
 //
 
-import Foundation
 import UIKit
 
 struct Thumbnail  {
