@@ -8,18 +8,21 @@
 import UIKit
 
 class ChannelCVC: UICollectionViewCell {
-
-	static let identifier = "ChannelCVC"
-
+	
 	var manager = HomeManager.shared
-
+	
 	@IBOutlet weak var channelImage: UIImageView!
 	@IBOutlet weak var channelTitle: UILabel!
-
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 	}
+}
 
+extension ChannelCVC: CellProtocol {
+	
+	static let identifier = "ChannelCVC"
+	
 	func getCellConfigureAt(_ index: Int) {
 		channelImage.image = manager.getChannelImage(index)
 		channelTitle.text = manager.getChannelTitle(index)

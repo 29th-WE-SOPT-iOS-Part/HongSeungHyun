@@ -8,9 +8,7 @@
 import UIKit
 
 class ThumbnailTVC: UITableViewCell {
-
-	static let identifier = "ThumbnailTVC"
-
+	
 	var manager =  HomeManager.shared
 	
 	@IBOutlet weak var thumbnailImage: UIImageView!
@@ -19,13 +17,18 @@ class ThumbnailTVC: UITableViewCell {
 	@IBOutlet weak var infoLabel: UILabel!
 	
 	override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+		super.awakeFromNib()
+	}
+	
+	override func setSelected(_ selected: Bool, animated: Bool) {
+		super.setSelected(selected, animated: animated)
+	}
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+extension ThumbnailTVC: CellProtocol {
+	
+	static let identifier = "ThumbnailTVC"
+	
 	func getCellConfigureAt(_ index: Int) {
 		thumbnailImage.image = manager.getThumbnailImage(index)
 		thumbnailTitle.text = manager.getThumbnailTitle(index)
