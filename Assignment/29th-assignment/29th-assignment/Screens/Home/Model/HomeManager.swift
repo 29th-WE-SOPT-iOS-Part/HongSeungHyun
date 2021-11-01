@@ -8,9 +8,9 @@
 import UIKit
 
 struct HomeManager {
-
+	
 	static let shared = HomeManager()
-
+	
 	lazy var thumbnails = [
 		Thumbnail(thumbNailImage: makeImage(imageName: "wesoptiOSPart"), profileImage: makeImage(imageName: "wesoptProfile"), title: "1차 iOS세미나 : iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면전환", author: "WE SOPT", views: "100만회", createdDate: "3주전"),
 		Thumbnail(thumbNailImage: makeImage(imageName: "wesoptiOSPart"), profileImage: makeImage(imageName: "wesoptProfile"), title: "2차 iOS세미나 : AutoLayout, StackView, TabBarController", author: "WE SOPT", views: "100만회", createdDate: "3주전"),
@@ -32,13 +32,11 @@ struct HomeManager {
 		Channel(image: makeImage(imageName: "ggamju6"), title: "PlanPart"),
 		Channel(image: makeImage(imageName: "ggamju7"), title: "WE SOPT"),
 		Channel(image: makeImage(imageName: "ggamju8"), title: "29th SOPT"),
-	
+		
 	]
-	
-
 }
 
-extension HomeManager {
+extension HomeManager: ThumbnailManager {
 	mutating func getThumbnailImage(_ index: Int) -> UIImage {
 		return thumbnails[index].thumbNailImage
 	}
@@ -73,7 +71,7 @@ extension HomeManager {
 	}
 }
 
-extension HomeManager {
+extension HomeManager: ChannelManager {
 	mutating func getChannelImage(_ index: Int) -> UIImage {
 		return channels[index].image
 	}
