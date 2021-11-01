@@ -11,19 +11,27 @@ class HomeVC: UIViewController {
 
 	var manager = HomeManager.shared
 	
-	@IBOutlet weak var tableView: UITableView! {
+	@IBOutlet weak var mainFeed: UITableView! {
 		didSet {
-			tableView.delegate = self
-			tableView.dataSource = self
+			mainFeed.delegate = self
+			mainFeed.dataSource = self
 			registerTableViewXib()
 		}
 	}
 	
-	@IBOutlet weak var collectionView: UICollectionView! {
+	@IBOutlet weak var channelList: UICollectionView! {
 		didSet {
-			collectionView.delegate = self
-			collectionView.dataSource = self
-			registerCollectionViewXib()
+			channelList.delegate = self
+			channelList.dataSource = self
+			registerCollectionViewXib(CVC: ChannelCVC(), view: self.channelList)
+		}
+	}
+	
+	@IBOutlet weak var tagList: UICollectionView! {
+		didSet {
+			tagList.delegate = self
+			tagList.dataSource = self
+			registerCollectionViewXib(CVC: TagCVC(), view: self.tagList)
 		}
 	}
 	
@@ -33,12 +41,11 @@ class HomeVC: UIViewController {
 	
 	func registerTableViewXib() {
 		let xibName = UINib(nibName: ThumbnailTVC.identifier, bundle: nil)
-		tableView.register(xibName, forCellReuseIdentifier: ThumbnailTVC.identifier)
+		mainFeed.register(xibName, forCellReuseIdentifier: ThumbnailTVC.identifier)
 	}
 	
-	func registerCollectionViewXib() {
-		let xibName = UINib(nibName: ChannelCVC.identifier, bundle: nil)
-		collectionView.register(xibName, forCellWithReuseIdentifier: ChannelCVC.identifier)
+	func registerCollectionViewXib<Cell, View>(CVC: Cell, view: View) where Cell: UICollectionViewCell, Cell: CellProtocol, View: UICollectionView {
+		let nibName = UINib(nibName: Cell.identifier, bundle: nil)
+		view.register(nibName, forCellWithReuseIdentifier: Cell.identifier)
 	}
 }
-
