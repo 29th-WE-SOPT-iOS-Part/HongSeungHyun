@@ -7,7 +7,7 @@
 |**1주차**| iOS 기초, Xcode 사용과 UI 구성하기, 화면 전환 및 데이터 전달 기초
 |**2주차**| AutoLayout, StackView, TabBarController
 |**3주차**| ScrollView, Delegate Pattern, TableView, CollectionView
-|**4주차**| Cocoapods & Networking, REST API
+|**4주차**| Network, REST API, Postman 사용법, Alamofire를 활용한 통신 실습
 |**5주차**| 디자인 합동 세미나
 |**6주차**| 서버 합동 세미나
 |**7주차**| Animation과 제스쳐, 데이터 전달 심화
@@ -33,4 +33,11 @@
 |  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
 |:--------:|:--------:|:--------:|:--------:|
 |**3주차 세미나**|ScrollView, Delegate Pattern, TableView, CollectionView|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/9)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/10)
-|**3주차 과제**|TableView와 CollectionView|-|-
+|**3주차 과제**|TableView와 CollectionView|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/11)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/12)
+---
+![week4-tile](https://user-images.githubusercontent.com/63908856/141256053-1649fd82-84ad-4741-8486-ea163a383ee2.png)
+
+|  <center>분류</center> |  <center>내용</center> |  <center>issue</center> |  <center>Pull request</center> 
+|:--------:|:--------:|:--------:|:--------:|
+|**4주차 세미나**|Network, REST API, Postman 사용법, Alamofire를 활용한 통신 실습|[Link💡](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/issues/13)|[Link🍎](https://github.com/29th-WE-SOPT-iOS-Part/HongSeungHyun/pull/14)
+|**4주차 과제**|Networking|-|-
