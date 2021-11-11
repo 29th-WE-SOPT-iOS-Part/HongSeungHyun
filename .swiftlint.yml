@@ -1,0 +1,19 @@
+disabled_rules:
+  - line_length
+  - nesting
+  - empty_count
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+included:
+  - Assignment/29th-assignment/29th-assignment/
+excluded:
+  - Assignment/29th-assignment/29th-assignment/AppDelegate.swift
+  - Assignment/29th-assignment/29th-assignment/SceneDelegate.swift
+
+force_cast: warning
+force_try:
+  severity: warning
+type_body_length:
+  - 300
+  - 400
