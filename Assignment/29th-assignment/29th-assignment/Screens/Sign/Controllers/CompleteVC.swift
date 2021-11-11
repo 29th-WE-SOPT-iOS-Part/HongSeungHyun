@@ -42,7 +42,7 @@ class CompleteVC: UIViewController {
 	
 	@IBAction func checkButtonDidTap(_ sender: Any) {
 		let tabBarSB = UIStoryboard(name: "TabBar", bundle: nil)
-		guard let tabBarVC = tabBarSB.instantiateViewController(identifier:"TBC") as? TBC else { return }
+		guard let tabBarVC = tabBarSB.instantiateViewController(identifier: "TBC") as? TBC else { return }
 
 		tabBarVC.modalPresentationStyle = .fullScreen
 		self.present(tabBarVC, animated: true, completion: nil)

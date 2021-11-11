@@ -7,9 +7,9 @@
 
 import UIKit
 
-struct Thumbnail  {
+struct Thumbnail {
 	var thumbNailImage: UIImage
-	var	profileImage: UIImage
+	var profileImage: UIImage
 	var title: String
 	var author: String
 	var views: String
