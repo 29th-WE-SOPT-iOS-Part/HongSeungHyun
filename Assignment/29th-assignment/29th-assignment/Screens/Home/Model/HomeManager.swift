@@ -23,7 +23,6 @@ struct HomeManager {
 		Thumbnail(thumbNailImage: makeImage(imageName: "wesoptiOSPart"), profileImage: makeImage(imageName: "wesoptProfile"), title: "8차 iOS세미나 : 협업 시 도움이 되는 팁과 라이브러리 사용", author: "WE SOPT", views: "100만회", createdDate: "3주전")
 	]
 	
-	
 	lazy var channels = [
 		Channel(image: makeImage(imageName: "ggamju1"), title: "iOSPart"),
 		Channel(image: makeImage(imageName: "ggamju2"), title: "AndroidPart"),
@@ -33,7 +32,6 @@ struct HomeManager {
 		Channel(image: makeImage(imageName: "ggamju6"), title: "PlanPart"),
 		Channel(image: makeImage(imageName: "ggamju7"), title: "WE SOPT"),
 		Channel(image: makeImage(imageName: "ggamju8"), title: "29th SOPT"),
-		
 	]
 	
 	lazy var tags = [
