@@ -59,15 +59,7 @@ class LoginVC: UIViewController {
 	}
 
 	@IBAction func signInButtonDidTap(_ sender: Any) {
-		/// 새로운 뷰 컨트롤러의 인스턴스를 생성합니다.
-		guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
-
-		/// nameTextField의 text를 completeVC의 userName에 할당합니다.
-		completeVC.userName = nameTextField.text
-		/// modalPresentationStyle을 전체화면으로 합니다.
-		completeVC.modalPresentationStyle = .fullScreen
-		/// present 메소드를 이용하여 화면을 전환합니다.
-		self.present(completeVC, animated: true)
+		requestLogin()
 	}
 
 	@IBAction func signUpButtonDidTap(_ sender: Any) {
@@ -80,5 +72,37 @@ class LoginVC: UIViewController {
 	// MARK: Unwind Segue를 사용하여 로그인 화면으로 돌아옵니다.
 
 	@IBAction func otherAccountLoginButtonDidTap(_ sender: UIStoryboardSegue) { }
+}
+
+extension LoginVC {
+	func requestLogin() {
+		Network.shared.requestLogin(userEmail: emailPhoneTextField.text ?? "", userPw: pwTextField.text ?? "") { [self] networkResult in
+			switch networkResult {
+			case .success(let loginResponse):
+				let alert = UIAlertController(title: "로그인", message: "로그인 성공", preferredStyle: .alert)
+					let okAction = UIAlertAction(title: title, style: .default)
+				alert.addAction(okAction)
+				present(alert, animated: true) {
+				guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
+				completeVC.userName = nameTextField.text
+				completeVC.modalPresentationStyle = .fullScreen
+				self.present(completeVC, animated: true)
+			}
+			case .requestErr(let loginResponse):
+				if let response = loginResponse as? AuthResponse {
+					let alert = UIAlertController(title: "로그인", message: "\(response.message)", preferredStyle: .alert)
+						let okAction = UIAlertAction(title: title, style: .default)
+					alert.addAction(okAction)
+					present(alert, animated: true)
+				}
+			case .pathErr:
+					NSLog("pathErr")
+			case .serverErr:
+					NSLog("serverErr")
+			case .networkFail:
+					NSLog("networkFail")
+			}
+		}
+	}
 }
 
