@@ -54,5 +54,38 @@ class SignUpVC: UIViewController {
 		completeVC.modalPresentationStyle = .fullScreen
 		/// present 메소드를 이용하여 화면을 전환합니다.
 		self.present(completeVC, animated: true)
+		requestSignUP()
+	}
+}
+
+extension SignUpVC {
+	func requestSignUP() {
+		Network.shared.requestSignUp(userEmail: emailPhoneTextField.text ?? "", userName: nameTextField.text ?? "", userPw: pwTextField.text ?? "") { [self] networkResult in
+			switch networkResult {
+				case .success(let loginResponse):
+					let alert = UIAlertController(title: "회원가입", message: "회원가입 성공", preferredStyle: .alert)
+					let okAction = UIAlertAction(title: title, style: .default)
+					alert.addAction(okAction)
+					present(alert, animated: true) {
+						guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
+						completeVC.userName = nameTextField.text
+						completeVC.modalPresentationStyle = .fullScreen
+						self.present(completeVC, animated: true)
+					}
+				case .requestErr(let loginResponse):
+					if let response = loginResponse as? AuthResponse {
+						let alert = UIAlertController(title: "회원가입", message: "\(response.message)", preferredStyle: .alert)
+						let okAction = UIAlertAction(title: title, style: .default)
+						alert.addAction(okAction)
+						present(alert, animated: true)
+					}
+				case .pathErr:
+					NSLog("pathErr")
+				case .serverErr:
+					NSLog("serverErr")
+				case .networkFail:
+					NSLog("networkFail")
+			}
+		}
 	}
 }
