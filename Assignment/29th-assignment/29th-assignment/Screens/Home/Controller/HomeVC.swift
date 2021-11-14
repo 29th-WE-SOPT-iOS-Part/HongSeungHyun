@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+	
 	var manager = HomeManager.shared
 	
 	@IBOutlet weak var mainFeed: UITableView! {
@@ -36,9 +36,18 @@ class HomeVC: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+		super.viewDidLoad()
+	}
 	
+	@IBAction func pushLoginVCDidTap(_ sender: Any) {
+		let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+		guard let signFlowNC = storyBoard.instantiateViewController(withIdentifier: "SignFlowNC") as? UINavigationController else { return }
+		signFlowNC.modalPresentationStyle = .fullScreen
+		self.present(signFlowNC, animated: true, completion: nil)
+	}
+}
+
+extension HomeVC {
 	func registerTableViewXib() {
 		let xibName = UINib(nibName: ThumbnailTVC.identifier, bundle: nil)
 		mainFeed.register(xibName, forCellReuseIdentifier: ThumbnailTVC.identifier)
