@@ -54,7 +54,7 @@
                                             <constraint firstAttribute="width" constant="96" id="xfR-P7-WgF"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47V-RA-TY1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47V-RA-TY1">
                                         <rect key="frame" x="227" y="-9" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="47V-RA-TY1" secondAttribute="height" multiplier="1:1" id="A9u-4S-uzz"/>
@@ -63,7 +63,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="windowSharingIcon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-sp-rUB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-sp-rUB">
                                         <rect key="frame" x="325" y="-9" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="NFc-z9-l1s"/>
@@ -72,7 +72,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="SearchIcon" title=""/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-o1-dJx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-o1-dJx">
                                         <rect key="frame" x="276" y="-9" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="FUH-aU-8EE"/>
@@ -81,26 +81,32 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="notificationIcon"/>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="TDk-cv-Sa9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMt-CN-uNd" userLabel="ProfileButton">
                                         <rect key="frame" x="374" y="-5" width="24" height="24"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="CPX-SL-J2o"/>
-                                            <constraint firstAttribute="width" secondItem="TDk-cv-Sa9" secondAttribute="height" multiplier="1:1" id="IG4-Ha-ewo"/>
+                                            <constraint firstAttribute="width" secondItem="tMt-CN-uNd" secondAttribute="height" multiplier="1:1" id="EYe-qm-TWS"/>
+                                            <constraint firstAttribute="width" constant="24" id="KDF-K4-Ydb"/>
                                         </constraints>
-                                    </imageView>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="wesoptProfile"/>
+                                        <connections>
+                                            <action selector="pushLoginVCDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="w9j-sB-CCy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="zHi-o1-dJx" firstAttribute="leading" secondItem="47V-RA-TY1" secondAttribute="trailing" constant="17" id="3jH-z0-6az"/>
                                     <constraint firstItem="1dK-5h-bJf" firstAttribute="centerY" secondItem="jlA-mu-Mvb" secondAttribute="centerY" id="4d4-Lq-up1"/>
+                                    <constraint firstAttribute="trailing" secondItem="tMt-CN-uNd" secondAttribute="trailing" constant="16" id="4oy-ot-MRX"/>
+                                    <constraint firstItem="tMt-CN-uNd" firstAttribute="leading" secondItem="0Sa-sp-rUB" secondAttribute="trailing" constant="17" id="DTA-Zt-9KJ"/>
+                                    <constraint firstItem="tMt-CN-uNd" firstAttribute="centerY" secondItem="jlA-mu-Mvb" secondAttribute="centerY" id="IPK-2R-Tfj"/>
                                     <constraint firstItem="47V-RA-TY1" firstAttribute="centerY" secondItem="jlA-mu-Mvb" secondAttribute="centerY" id="QSe-7g-34T"/>
-                                    <constraint firstAttribute="trailing" secondItem="TDk-cv-Sa9" secondAttribute="trailing" constant="16" id="ZpY-rm-Oaj"/>
                                     <constraint firstItem="0Sa-sp-rUB" firstAttribute="leading" secondItem="zHi-o1-dJx" secondAttribute="trailing" constant="17" id="bom-my-2oJ"/>
                                     <constraint firstItem="zHi-o1-dJx" firstAttribute="centerY" secondItem="jlA-mu-Mvb" secondAttribute="centerY" id="dfS-NT-Moe"/>
+                                    <constraint firstItem="tMt-CN-uNd" firstAttribute="centerY" secondItem="47V-RA-TY1" secondAttribute="centerY" id="rq4-v8-u8O"/>
                                     <constraint firstItem="0Sa-sp-rUB" firstAttribute="centerY" secondItem="jlA-mu-Mvb" secondAttribute="centerY" id="xg1-gt-qrD"/>
-                                    <constraint firstItem="TDk-cv-Sa9" firstAttribute="leading" secondItem="0Sa-sp-rUB" secondAttribute="trailing" constant="17" id="yRg-Fp-2Rm"/>
                                     <constraint firstItem="1dK-5h-bJf" firstAttribute="leading" secondItem="jlA-mu-Mvb" secondAttribute="leading" constant="16" id="ydI-qR-yWC"/>
-                                    <constraint firstItem="TDk-cv-Sa9" firstAttribute="centerY" secondItem="jlA-mu-Mvb" secondAttribute="centerY" id="zbq-qS-exx"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Nw-ck-yNX">
@@ -125,6 +131,14 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
