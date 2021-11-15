@@ -78,12 +78,12 @@ extension LoginVC {
 	func requestLogin() {
 		if let userEmail = emailPhoneTextField.text,
 		   let userPw = pwTextField.text {
-			UserSignService.shared.requestLogin(userEmail: userEmail, userPw: userPw) { responseData in
+			UserSignService.shared.requestSignService(userEmail: userEmail, userPw: userPw, requestType: APIConstants.RequestType.login) { responseData in
 				switch responseData {
 				case .success(let response):
-					self.loginSuccessAction(response: response)
+					self.loginSuccessAction(response)
 				case .failure(.requestErr(let error)):
-					self.loginFailureAction(error: error)
+					self.loginFailureAction(error)
 				case .failure(let error):
 					NSLog(error.localizedDescription)
 				}
@@ -91,7 +91,7 @@ extension LoginVC {
 		}
 	}
 	
-	func loginSuccessAction(response: AuthResponse) {
+	func loginSuccessAction(_ response: AuthResponse) {
 		self.makeAlert(title: APIConstants.RequestType.login.rawValue, message: response.message, okAction: { [weak self] _ in
 			guard let completeVC = self?.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
 			completeVC.userName = self?.nameTextField.text
@@ -100,7 +100,7 @@ extension LoginVC {
 		})
 	}
 	
-	func loginFailureAction(error: AuthResponse) {
+	func loginFailureAction(_ error: AuthResponse) {
 		self.makeAlert(title: APIConstants.RequestType.login.rawValue, message: error.message)
 	}
 }
