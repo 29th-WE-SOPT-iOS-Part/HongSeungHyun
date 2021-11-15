@@ -76,33 +76,32 @@ class LoginVC: UIViewController {
 
 extension LoginVC {
 	func requestLogin() {
-		Network.shared.requestLogin(userEmail: emailPhoneTextField.text ?? "", userPw: pwTextField.text ?? "") { [self] networkResult in
-			switch networkResult {
-			case .success(let loginResponse):
-				let alert = UIAlertController(title: "로그인", message: "로그인 성공", preferredStyle: .alert)
-					let okAction = UIAlertAction(title: title, style: .default)
-				alert.addAction(okAction)
-				present(alert, animated: true) {
-				guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
-				completeVC.userName = nameTextField.text
-				completeVC.modalPresentationStyle = .fullScreen
-				self.present(completeVC, animated: true)
-			}
-			case .requestErr(let loginResponse):
-				if let response = loginResponse as? AuthResponse {
-					let alert = UIAlertController(title: "로그인", message: "\(response.message)", preferredStyle: .alert)
-						let okAction = UIAlertAction(title: title, style: .default)
-					alert.addAction(okAction)
-					present(alert, animated: true)
+		if let userEmail = emailPhoneTextField.text,
+		   let userPw = pwTextField.text {
+			UserSignService.shared.requestLogin(userEmail: userEmail, userPw: userPw) { responseData in
+				switch responseData {
+				case .success(let response):
+					self.loginSuccessAction(response: response)
+				case .failure(.requestErr(let error)):
+					self.loginFailureAction(error: error)
+				case .failure(let error):
+					NSLog(error.localizedDescription)
 				}
-			case .pathErr:
-					NSLog("pathErr")
-			case .serverErr:
-					NSLog("serverErr")
-			case .networkFail:
-					NSLog("networkFail")
 			}
 		}
+	}
+	
+	func loginSuccessAction(response: AuthResponse) {
+		self.makeAlert(title: APIConstants.RequestType.login.rawValue, message: response.message, okAction: { [weak self] _ in
+			guard let completeVC = self?.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
+			completeVC.userName = self?.nameTextField.text
+			completeVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+			self?.present(completeVC, animated: true)
+		})
+	}
+	
+	func loginFailureAction(error: AuthResponse) {
+		self.makeAlert(title: APIConstants.RequestType.login.rawValue, message: error.message)
 	}
 }
 

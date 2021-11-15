@@ -9,5 +9,6 @@ import Foundation
 
 struct AuthRequest: Codable {
 	let email: String
+	let name: String?
 	let password: String
 }

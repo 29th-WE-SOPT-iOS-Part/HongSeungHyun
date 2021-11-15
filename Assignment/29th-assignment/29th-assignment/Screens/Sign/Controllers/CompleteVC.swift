@@ -37,14 +37,12 @@ class CompleteVC: UIViewController {
 		greetingMessage.textAlignment = .center
 		greetingMessage.sizeToFit()
 	}
-
-	// MARK: 확인 버튼을 누르면 TabBar로 연결된 화면을 present합니다.
 	
 	@IBAction func checkButtonDidTap(_ sender: Any) {
 		let tabBarSB = UIStoryboard(name: "TabBar", bundle: nil)
 		guard let tabBarVC = tabBarSB.instantiateViewController(identifier: "TBC") as? TBC else { return }
 
 		tabBarVC.modalPresentationStyle = .fullScreen
-		self.present(tabBarVC, animated: true, completion: nil)
+		self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
 	}
 }
