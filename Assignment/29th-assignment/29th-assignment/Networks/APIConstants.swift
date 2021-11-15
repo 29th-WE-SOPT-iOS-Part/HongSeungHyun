@@ -16,7 +16,7 @@ struct APIConstants {
 	}
 	
 	static let loginURL = baseURL.appendingPathComponent("/user/login")
-	static let singUpURL = baseURL.appendingPathComponent("/user/signup")
+	static let signUpURL = baseURL.appendingPathComponent("/user/signup")
 	static let getUserURL = baseURL.appendingPathComponent("/user/")
 	
 	enum HTTPHeaderField: String {
@@ -29,5 +29,16 @@ struct APIConstants {
 	
 	enum ContentType: String {
 		case json = "application/json"
+	}
+	
+	enum RequestType: String {
+		case login = "로그인"
+		case signUp = "회원가입"
+		case getUser
+	}
+	
+	enum HttpMethod: String {
+		case post = "POST"
+		case get = "GET"
 	}
 }
