@@ -12,8 +12,7 @@ extension UIViewController {
 		let generator = UIImpactFeedbackGenerator(style: .medium)
 		generator.impactOccurred()
 		
-		let alertViewController = UIAlertController(title: title, message: message,
-													preferredStyle: .alert)
+		let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		
 		let okAction = UIAlertAction(title: "확인", style: .default, handler: okAction)
 		alertViewController.addAction(okAction)
