@@ -45,47 +45,39 @@ class SignUpVC: UIViewController {
 	}
 
 	@IBAction func signUpButtonDidTap(_ sender: Any) {
-		/// 새로운 뷰 컨트롤러의 인스턴스를 생성합니다.
-		guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
-
-		/// nameTextField의 text를 completeVC의 userName에 할당합니다.
-		completeVC.userName = nameTextField.text
-		/// modalPresentationStyle을 전체화면으로 합니다.
-		completeVC.modalPresentationStyle = .fullScreen
-		/// present 메소드를 이용하여 화면을 전환합니다.
-		self.present(completeVC, animated: true)
 		requestSignUP()
 	}
 }
 
 extension SignUpVC {
 	func requestSignUP() {
-		Network.shared.requestSignUp(userEmail: emailPhoneTextField.text ?? "", userName: nameTextField.text ?? "", userPw: pwTextField.text ?? "") { [self] networkResult in
-			switch networkResult {
-				case .success(let loginResponse):
-					let alert = UIAlertController(title: "회원가입", message: "회원가입 성공", preferredStyle: .alert)
-					let okAction = UIAlertAction(title: title, style: .default)
-					alert.addAction(okAction)
-					present(alert, animated: true) {
-						guard let completeVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
-						completeVC.userName = nameTextField.text
-						completeVC.modalPresentationStyle = .fullScreen
-						self.present(completeVC, animated: true)
-					}
-				case .requestErr(let loginResponse):
-					if let response = loginResponse as? AuthResponse {
-						let alert = UIAlertController(title: "회원가입", message: "\(response.message)", preferredStyle: .alert)
-						let okAction = UIAlertAction(title: title, style: .default)
-						alert.addAction(okAction)
-						present(alert, animated: true)
-					}
-				case .pathErr:
-					NSLog("pathErr")
-				case .serverErr:
-					NSLog("serverErr")
-				case .networkFail:
-					NSLog("networkFail")
+		if let userEmail = emailPhoneTextField.text,
+		   let userName = nameTextField.text,
+		   let userPw = pwTextField.text {
+			UserSignService.shared.requestSignService(userEmail: userEmail, userPw: userPw, userName: userName, requestType: APIConstants.RequestType.signUp) { responseData in
+				switch responseData {
+				case .success(let response):
+					self.signUpSuccessAction(response)
+				case .failure(.requestErr(let error)):
+					self.signUpFailureAction(error)
+				case .failure(let error):
+					NSLog(error.localizedDescription)
+				}
 			}
+			
 		}
+	}
+	
+	func signUpSuccessAction(_ response: AuthResponse) {
+		self.makeAlert(title: APIConstants.RequestType.signUp.rawValue, message: response.message, okAction: { [weak self] _ in
+			guard let completeVC = self?.storyboard?.instantiateViewController(withIdentifier: "CompleteVC") as? CompleteVC else { return }
+			completeVC.userName = self?.nameTextField.text
+			completeVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+			self?.present(completeVC, animated: true)
+		})
+	}
+	
+	func signUpFailureAction(_ error: AuthResponse) {
+		self.makeAlert(title: APIConstants.RequestType.signUp.rawValue, message: error.message)
 	}
 }
