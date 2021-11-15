@@ -12,7 +12,7 @@ struct UserSignService {
 	static let shared = UserSignService()
 	private init() {}
 		
-	func requestSignService(userEmail: String, userPw: String, userName: String? = nil, requestType: APIConstants.RequestType, completion: @escaping (Result<AuthResponse, NetworkError<AuthResponse>>) -> ()) {
+	func requestSignService(userEmail: String, userPw: String, userName: String? = nil, requestType: APIConstants.RequestType, completion: @escaping (Result<AuthResponse, NetworkError<AuthResponse>>) -> (Void)) {
 		let session = makeUrlSession()
 		let requestData: Data?
 		var urlRequest: URLRequest?
@@ -56,12 +56,12 @@ extension UserSignService {
 		let url: URL
 		let httpMethod: String
 		switch requestType {
-			case .login:
-				url = APIConstants.loginURL
-				httpMethod = APIConstants.HttpMethod.post.rawValue
-			case .signUp:
-				url = APIConstants.signUpURL
-				httpMethod = APIConstants.HttpMethod.post.rawValue
+		case .login:
+			url = APIConstants.loginURL
+			httpMethod = APIConstants.HttpMethod.post.rawValue
+		case .signUp:
+			url = APIConstants.signUpURL
+			httpMethod = APIConstants.HttpMethod.post.rawValue
 		default:
 			return nil
 		}
