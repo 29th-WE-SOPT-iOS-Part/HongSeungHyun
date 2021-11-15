@@ -31,7 +31,7 @@ struct HomeManager {
 		Channel(image: makeImage(imageName: "ggamju5"), title: "DesignPart"),
 		Channel(image: makeImage(imageName: "ggamju6"), title: "PlanPart"),
 		Channel(image: makeImage(imageName: "ggamju7"), title: "WE SOPT"),
-		Channel(image: makeImage(imageName: "ggamju8"), title: "29th SOPT"),
+		Channel(image: makeImage(imageName: "ggamju8"), title: "29th SOPT")
 	]
 	
 	lazy var tags = [
@@ -40,7 +40,7 @@ struct HomeManager {
 		Tag(title: "이어서 시청하기"),
 		Tag(title: "시청하지 않음"),
 		Tag(title: "실시간"),
-		Tag(title: "게시물"),
+		Tag(title: "게시물")
 	]
 }
 

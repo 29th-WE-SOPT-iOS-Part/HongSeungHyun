@@ -104,4 +104,3 @@ extension LoginVC {
 		self.makeAlert(title: APIConstants.RequestType.login.rawValue, message: error.message)
 	}
 }
-

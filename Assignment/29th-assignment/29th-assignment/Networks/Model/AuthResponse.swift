@@ -15,6 +15,11 @@ struct AuthResponse: Codable {
 }
 
 struct LoginResultData: Codable {
-	let id: Int
+	let userId: Int
 	let name, email: String
+	
+	enum CodingKeys: String, CodingKey {
+		case userId = "id"
+		case name, email
+	}
 }
