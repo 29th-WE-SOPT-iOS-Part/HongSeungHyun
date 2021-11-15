@@ -12,7 +12,7 @@ struct UserSignService {
 	static let shared = UserSignService()
 	private init() {}
 		
-	func requestSignService(userEmail: String, userPw: String, userName: String? = nil, requestType: APIConstants.RequestType, completion: @escaping (Result<AuthResponse, NetworkError<AuthResponse>>) -> (Void)) {
+	func requestSignService(userEmail: String, userPw: String, userName: String? = nil, requestType: APIConstants.RequestType, completion: @escaping (Result<AuthResponse, NetworkError<AuthResponse>>) -> Void) {
 		let session = makeUrlSession()
 		let requestData: Data?
 		var urlRequest: URLRequest?
