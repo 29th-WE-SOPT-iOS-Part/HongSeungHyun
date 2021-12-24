@@ -18,6 +18,7 @@
 		4FDDACB82775C8EC004DBF03 /* DelegationPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACB72775C8EC004DBF03 /* DelegationPracticeVC.swift */; };
 		4FDDACBD2775C9C5004DBF03 /* KeywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACBB2775C9C5004DBF03 /* KeywordCVC.swift */; };
 		4FDDACBE2775C9C5004DBF03 /* KeywordCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDACBC2775C9C5004DBF03 /* KeywordCVC.xib */; };
+		4FDDACC02775D07F004DBF03 /* GestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACBF2775D07F004DBF03 /* GestureVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4FDDACB72775C8EC004DBF03 /* DelegationPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegationPracticeVC.swift; sourceTree = "<group>"; };
 		4FDDACBB2775C9C5004DBF03 /* KeywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCVC.swift; sourceTree = "<group>"; };
 		4FDDACBC2775C9C5004DBF03 /* KeywordCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordCVC.xib; sourceTree = "<group>"; };
+		4FDDACBF2775D07F004DBF03 /* GestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +72,15 @@
 				4FDDACA12775C112004DBF03 /* SceneDelegate.swift */,
 				4FDDACA32775C112004DBF03 /* ViewController.swift */,
 				4FDDACA52775C112004DBF03 /* Main.storyboard */,
-				4FDDACBB2775C9C5004DBF03 /* KeywordCVC.swift */,
-				4FDDACBC2775C9C5004DBF03 /* KeywordCVC.xib */,
 				4FDDACA82775C113004DBF03 /* Assets.xcassets */,
 				4FDDACAA2775C113004DBF03 /* LaunchScreen.storyboard */,
 				4FDDACAD2775C113004DBF03 /* Info.plist */,
 				4FDDACB32775C339004DBF03 /* FirstVC.swift */,
 				4FDDACB52775C345004DBF03 /* SecondVC.swift */,
+				4FDDACBC2775C9C5004DBF03 /* KeywordCVC.xib */,
+				4FDDACBB2775C9C5004DBF03 /* KeywordCVC.swift */,
 				4FDDACB72775C8EC004DBF03 /* DelegationPracticeVC.swift */,
+				4FDDACBF2775D07F004DBF03 /* GestureVC.swift */,
 			);
 			path = "29th-week7-seminar";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				4FDDACA42775C112004DBF03 /* ViewController.swift in Sources */,
 				4FDDACB62775C345004DBF03 /* SecondVC.swift in Sources */,
+				4FDDACC02775D07F004DBF03 /* GestureVC.swift in Sources */,
 				4FDDACB42775C339004DBF03 /* FirstVC.swift in Sources */,
 				4FDDACA02775C112004DBF03 /* AppDelegate.swift in Sources */,
 				4FDDACA22775C112004DBF03 /* SceneDelegate.swift in Sources */,
