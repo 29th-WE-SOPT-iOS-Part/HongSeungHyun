@@ -19,7 +19,17 @@ class FirstVC: UIViewController {
     
 	@IBAction func touchUpToSendData(_ sender: Any) {
 		guard let nextVC = storyboard?.instantiateViewController(withIdentifier: SecondVC.identifier) as? SecondVC else { return }
-		nextVC.receivedText = textField?.text ?? ""
+		NotificationCenter.default.addObserver(self,
+											   selector: #selector(dataReceived),
+											   name: NSNotification.Name("iOS-Sample"),
+											   object: nil)
+		
 		present(nextVC, animated: true)
+	}
+	
+	@objc func dataReceived(notification: NSNotification) {
+		if let text = notification.object as? String {
+			textField?.text = text
+		}
 	}
 }
