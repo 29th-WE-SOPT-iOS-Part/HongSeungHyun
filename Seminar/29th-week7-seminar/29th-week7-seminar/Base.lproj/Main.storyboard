@@ -186,13 +186,12 @@
                         <viewLayoutGuide key="safeArea" id="qXj-NA-wnP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="testView" destination="98Z-Ac-oyq" id="Fk0-gf-hnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueg-zv-gjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0Qb-YC-wen">
-                    <connections>
-                        <action selector="tapGesture:" destination="QLG-Eq-8jz" id="QEu-Jl-LnU"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0Qb-YC-wen"/>
             </objects>
             <point key="canvasLocation" x="138" y="1513"/>
         </scene>
