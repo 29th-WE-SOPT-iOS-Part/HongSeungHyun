@@ -10,6 +10,7 @@ import UIKit
 class ThumbnailTVC: UITableViewCell {
 	
 	var manager =  HomeManager.shared
+	weak var delegate: PresentView?
 	
 	@IBOutlet weak var thumbnailImage: UIImageView?
 	@IBOutlet weak var profileImage: UIImageView?
@@ -43,12 +44,21 @@ extension ThumbnailTVC: CellProtocol {
 extension ThumbnailTVC {
 	private func initTapGestureForImageView() {
 		let tapRecognizer = UITapGestureRecognizer(target: self,
-												   action: #selector(self.didTapProfileImage))
+												   action: #selector(self.profileImageDidTap))
 		thumbnailImage?.addGestureRecognizer(tapRecognizer)
 		thumbnailImage?.isUserInteractionEnabled = true
 	}
 	
-	@objc func didTapProfileImage() {
-	// doSomething()
+	@objc func profileImageDidTap() {
+		let detailContentSB = UIStoryboard(name: "DetailContent", bundle: nil)
+		guard let detailContentVC = detailContentSB.instantiateViewController(withIdentifier: DetailContentVC.identifier) as? DetailContentVC
+		else { return }
+		detailContentVC.modalPresentationStyle = .fullScreen
+		
+		let detailContentData = DetailContent(contentImage: thumbnailImage?.image,
+											  contentTitle: thumbnailTitle?.text,
+											  contentInfo: infoLabel?.text)
+		detailContentVC.contentData = detailContentData
+		delegate?.present(viewController: detailContentVC)
 	}
 }
