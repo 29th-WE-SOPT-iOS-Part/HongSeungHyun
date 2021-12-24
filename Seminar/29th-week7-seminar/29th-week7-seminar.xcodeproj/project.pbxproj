@@ -13,6 +13,8 @@
 		4FDDACA72775C112004DBF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDACA52775C112004DBF03 /* Main.storyboard */; };
 		4FDDACA92775C113004DBF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDACA82775C113004DBF03 /* Assets.xcassets */; };
 		4FDDACAC2775C113004DBF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDACAA2775C113004DBF03 /* LaunchScreen.storyboard */; };
+		4FDDACB42775C339004DBF03 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACB32775C339004DBF03 /* FirstVC.swift */; };
+		4FDDACB62775C345004DBF03 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACB52775C345004DBF03 /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4FDDACA82775C113004DBF03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FDDACAB2775C113004DBF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FDDACAD2775C113004DBF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FDDACB32775C339004DBF03 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		4FDDACB52775C345004DBF03 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				4FDDACA82775C113004DBF03 /* Assets.xcassets */,
 				4FDDACAA2775C113004DBF03 /* LaunchScreen.storyboard */,
 				4FDDACAD2775C113004DBF03 /* Info.plist */,
+				4FDDACB32775C339004DBF03 /* FirstVC.swift */,
+				4FDDACB52775C345004DBF03 /* SecondVC.swift */,
 			);
 			path = "29th-week7-seminar";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDDACA42775C112004DBF03 /* ViewController.swift in Sources */,
+				4FDDACB62775C345004DBF03 /* SecondVC.swift in Sources */,
+				4FDDACB42775C339004DBF03 /* FirstVC.swift in Sources */,
 				4FDDACA02775C112004DBF03 /* AppDelegate.swift in Sources */,
 				4FDDACA22775C112004DBF03 /* SceneDelegate.swift in Sources */,
 			);
