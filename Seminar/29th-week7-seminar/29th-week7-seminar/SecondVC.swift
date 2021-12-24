@@ -20,6 +20,9 @@ class SecondVC: UIViewController {
     }
     
 	@IBAction func touchUpToSendData(_ sender: Any) {
+		NotificationCenter.default.post(name: NSNotification.Name("iOS-Sample"),
+										object: textField?.text ?? "")
+		
 		let presentingVC = presentingViewController as? FirstVC
 		presentingVC?.textField?.text = textField?.text
 		dismiss(animated: true)
