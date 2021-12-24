@@ -50,6 +50,10 @@
 		4FD1828A270DD75900BC7DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD18288270DD75900BC7DE2 /* LaunchScreen.storyboard */; };
 		4FD182B627104CFB00BC7DE2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD182B527104CFB00BC7DE2 /* SignUpVC.swift */; };
 		4FD182B82710658E00BC7DE2 /* CompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD182B72710658E00BC7DE2 /* CompleteVC.swift */; };
+		4FDDACC22775F50E004DBF03 /* DetailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDACC12775F50E004DBF03 /* DetailContent.storyboard */; };
+		4FDDACC42775F5D0004DBF03 /* DetailContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACC32775F5D0004DBF03 /* DetailContentVC.swift */; };
+		4FDDACC62775F941004DBF03 /* DetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACC52775F941004DBF03 /* DetailContent.swift */; };
+		4FDDACC827760078004DBF03 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDACC727760078004DBF03 /* PresentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +103,10 @@
 		4FD1828B270DD75900BC7DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FD182B527104CFB00BC7DE2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		4FD182B72710658E00BC7DE2 /* CompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteVC.swift; sourceTree = "<group>"; };
+		4FDDACC12775F50E004DBF03 /* DetailContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContent.storyboard; sourceTree = "<group>"; };
+		4FDDACC32775F5D0004DBF03 /* DetailContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentVC.swift; sourceTree = "<group>"; };
+		4FDDACC52775F941004DBF03 /* DetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContent.swift; sourceTree = "<group>"; };
+		4FDDACC727760078004DBF03 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +196,7 @@
 				4F4256EF2722202D0001F62E /* HomeVC.swift */,
 				4F819C55272BF4EA008B41DD /* HomeVC+CollectionView.swift */,
 				4F819C4D272BE38C008B41DD /* HomeVC+TableView.swift */,
+				4FDDACC32775F5D0004DBF03 /* DetailContentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				4F4256ED27221A7F0001F62E /* Home.storyboard */,
+				4FDDACC12775F50E004DBF03 /* DetailContent.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -320,6 +330,7 @@
 				4F819C49272BD8CF008B41DD /* HomeManager.swift */,
 				4F819C53272BF20D008B41DD /* Channel.swift */,
 				4F838C91272DA871008D4DFB /* Tag.swift */,
+				4FDDACC52775F941004DBF03 /* DetailContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +342,7 @@
 				4F838C9C272DB2C3008D4DFB /* ChannelManger.swift */,
 				4F838C9E272DB2EA008D4DFB /* ThumbnailManager.swift */,
 				4F838CA0272DB481008D4DFB /* TagManager.swift */,
+				4FDDACC727760078004DBF03 /* PresentView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -456,6 +468,7 @@
 			files = (
 				4F4256E1272217870001F62E /* TabBar.storyboard in Resources */,
 				4F4256EE27221A7F0001F62E /* Home.storyboard in Resources */,
+				4FDDACC22775F50E004DBF03 /* DetailContent.storyboard in Resources */,
 				4F819C45272BCA6B008B41DD /* ThumbnailTVC.xib in Resources */,
 				4F4256FE2722246B0001F62E /* Add.storyboard in Resources */,
 				4FD1828A270DD75900BC7DE2 /* LaunchScreen.storyboard in Resources */,
@@ -485,6 +498,7 @@
 				4F819C54272BF20D008B41DD /* Channel.swift in Sources */,
 				4FD182B627104CFB00BC7DE2 /* SignUpVC.swift in Sources */,
 				4F4256F02722202D0001F62E /* HomeVC.swift in Sources */,
+				4FDDACC62775F941004DBF03 /* DetailContent.swift in Sources */,
 				4F4256E52722184B0001F62E /* TBC.swift in Sources */,
 				4F819C48272BD1B2008B41DD /* Thumbnail.swift in Sources */,
 				4F838C95272DA98E008D4DFB /* CellProtocol.swift in Sources */,
@@ -499,6 +513,7 @@
 				4F819C56272BF4EA008B41DD /* HomeVC+CollectionView.swift in Sources */,
 				4F838C9F272DB2EA008D4DFB /* ThumbnailManager.swift in Sources */,
 				4FD18280270DD75700BC7DE2 /* SceneDelegate.swift in Sources */,
+				4FDDACC42775F5D0004DBF03 /* DetailContentVC.swift in Sources */,
 				4F838C9A272DAEF0008D4DFB /* TagCVC.swift in Sources */,
 				4F838C9D272DB2C4008D4DFB /* ChannelManger.swift in Sources */,
 				4F819C44272BCA6B008B41DD /* ThumbnailTVC.swift in Sources */,
@@ -506,6 +521,7 @@
 				4FB8EFCD2741055200A5BB7E /* UserSignService.swift in Sources */,
 				4F2AE03227426577006785E4 /* UIViewController+makeAlert.swift in Sources */,
 				4FB8EFD32741263A00A5BB7E /* AuthResponse.swift in Sources */,
+				4FDDACC827760078004DBF03 /* PresentView.swift in Sources */,
 				4F01E4DB272FD9A200785744 /* UIView+IBInspectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
